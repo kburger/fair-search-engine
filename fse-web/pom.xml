@@ -13,8 +13,10 @@
 
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
+        
         <servlet.version>4.0.0</servlet.version>
         <snakeyaml.version>1.19</snakeyaml.version>
+        <jackson.version>2.9.2</jackson.version>
     </properties>
 
     <dependencies>
@@ -54,6 +56,12 @@
             <artifactId>snakeyaml</artifactId>
             <version>${snakeyaml.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+        		<groupId>com.fasterxml.jackson.core</groupId>
+        		<artifactId>jackson-databind</artifactId>
+        		<version>${jackson.version}</version>
+        		<scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>
