@@ -16,14 +16,14 @@ import nl.dtls.fse.service.SearchService;
 @RequestMapping("/submit")
 public class SubmissionController {
 	private static final Logger logger = LoggerFactory.getLogger(SubmissionController.class);
-	
+
 	@Autowired
 	private SearchService service;
-	
+
 	@PostMapping
 	public void submit(@RequestBody URL endpoint) {
 		logger.info("Received request for submission of {}", endpoint);
-		
+
 		service.crawl(endpoint);
 	}
 }

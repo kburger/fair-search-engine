@@ -15,10 +15,10 @@ import nl.dtls.fse.service.SearchService;
 @RestController
 public class SearchController {
 	private static final Logger logger = LoggerFactory.getLogger(SearchController.class);
-	
+
 	@Autowired
 	private SearchService service;
-	
+
 	@GetMapping
 	public Collection<SearchResult> search(@RequestParam("q") String query) {
 		logger.info("Received request to search for {}", query);

@@ -20,7 +20,7 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 	protected String[] getServletMappings() {
 		return array("/");
 	}
-	
+
 	@SafeVarargs
 	private static <T> T[] array(T... array) {
 		return array;

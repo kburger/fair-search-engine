@@ -12,12 +12,12 @@ public class RootConfig {
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer properties(Environment env) {
 		PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
-		
+
 		YamlPropertiesFactoryBean factory = new YamlPropertiesFactoryBean();
 		factory.setResources(new ClassPathResource("default.yml"));
-		
+
 		configurer.setProperties(factory.getObject());
-		
+
 		return configurer;
 	}
 }

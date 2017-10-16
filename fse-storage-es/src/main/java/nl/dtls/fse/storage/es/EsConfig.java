@@ -15,12 +15,11 @@ public class EsConfig {
 	@Bean(destroyMethod = "close")
 	public JestClient client(@Value("${fse.storage.es.server}") String esServer) {
 		JestClientFactory factory = new JestClientFactory();
-		
-		HttpClientConfig config = new HttpClientConfig.Builder(esServer)
-				.build();
-		
+
+		HttpClientConfig config = new HttpClientConfig.Builder(esServer).build();
+
 		factory.setHttpClientConfig(config);
-		
+
 		return factory.getObject();
 	}
 }

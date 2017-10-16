@@ -17,12 +17,12 @@ import nl.dtls.fse.storage.SearchRepository;
 @Component
 public class SearchServiceImpl implements SearchService {
 	private static final Logger logger = LoggerFactory.getLogger(SearchServiceImpl.class);
-	
+
 	@Autowired
 	private SearchRepository repository;
-	
+
 	private Crawler crawler;
-	
+
 	public SearchServiceImpl() {
 		crawler = new CrawlerImpl();
 	}
@@ -30,21 +30,21 @@ public class SearchServiceImpl implements SearchService {
 	@Override
 	public Collection<SearchResult> search(String query) {
 		logger.info("Searching for {}", query);
-		
+
 		return repository.search(query);
 	}
 
 	@Override
 	public Collection<Object> list() {
 		logger.info("Listing known endpoints");
-		
+
 		return repository.list();
 	}
 
 	@Override
 	public void crawl(URL endpoint) {
 		logger.info("Starting to crawl {}", endpoint);
-		
+
 		crawler.crawl(endpoint);
 	}
 }

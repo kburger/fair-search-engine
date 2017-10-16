@@ -15,10 +15,10 @@ import nl.dtls.fse.storage.SearchRepository;
 @Component
 public class EsSearchRepositoryImpl implements SearchRepository {
 	private static final Logger logger = LoggerFactory.getLogger(EsSearchRepositoryImpl.class);
-	
+
 	@Autowired
 	private JestClient client;
-	
+
 	@Override
 	public Collection<SearchResult> search(String query) {
 		try {
@@ -26,7 +26,7 @@ public class EsSearchRepositoryImpl implements SearchRepository {
 		} catch (IOException e) {
 			logger.warn("Coult not execute ES request", e);
 		}
-		
+
 		return null;
 	}
 

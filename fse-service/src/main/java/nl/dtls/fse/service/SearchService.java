@@ -7,8 +7,8 @@ import nl.dtls.fse.model.SearchResult;
 
 public interface SearchService {
 	Collection<SearchResult> search(String query);
-	
+
 	Collection<Object> list();
-	
+
 	void crawl(URL endpoint);
 }

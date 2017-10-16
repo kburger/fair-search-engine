@@ -6,6 +6,6 @@ import nl.dtls.fse.model.SearchResult;
 
 public interface SearchRepository {
 	Collection<SearchResult> search(String query);
-	
+
 	Collection<Object> list();
 }

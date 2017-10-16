@@ -9,7 +9,7 @@ import nl.dtls.fse.crawler.lib.Crawler;
 
 public class CrawlerImpl implements Crawler {
 	private static final Logger logger = LoggerFactory.getLogger(CrawlerImpl.class);
-	
+
 	@Override
 	public void crawl(URL endpoint) {
 		logger.info("now crawling {}", endpoint);
